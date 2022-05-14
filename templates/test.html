@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NCRT Supportive System</title>
+</head>
+<body>
+    <h1>NCRT Supportive System</h1>
+    <p>Pre MRI:</p>
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <input type="file" value="Choose File" name="prefile" style="margin-top:10px;"  />
+        <input type="submit" value="Confirm" class="button-new" style="margin-top:15px;"/>
+    </form>
+    <br>
+    <p >Post MRI:</p>
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <input type="file" value="Choose File" name="postfile" style="margin-top:10px;" />
+        <input type="submit" value="Confirm" class="button-new" style="margin-top:15px;"/>
+    </form>
+    
+    <p >Choose Model:</p>
+    <form action="/patient" method="post" >
+        {{form.model.lable}}
+        {{form.model}}
+        <input type="submit" name="model" value="Got!">
+    </form>
+</body>
+</html>

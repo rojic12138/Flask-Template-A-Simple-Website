@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NCRT Supportive System</title>
+</head>
+<body>
+    <h1>NCRT Supportive System</h1>
+    
+    <p>NCRT Dose File:</p>
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <input type="file" value="Choose File" name="dosefile" style="margin-top:10px;"  />
+        <input type="submit" value="Confirm" class="button-new" style="margin-top:15px;"/>
+    </form>
+    <br>
+    <p >NCRT Time File:</p>
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <input type="file" value="Choose File" name="timefile" style="margin-top:10px;" />
+        <input type="submit" value="Confirm" class="button-new" style="margin-top:15px;"/>
+    </form>
+    
+    <form action="/patient" method="post" >
+        <input type="submit" name="plan" value="Get Plan!" style="margin-top:10px;">
+    </form>
+    
+    <form style = "position:absolute;right:600px;top:100px" >
+        <h1>Plan:</h1>
+        {% for line in lines %}
+        <li>{{ line }}</li>
+        {% endfor %}
+    </form>
+</body>
+</html>
